@@ -1,9 +1,9 @@
 import { useState } from "react";
 import appCss from "./App.module.css";
-import notifCss from "../Notification/Notification.module.css";
 import CafeInfo from "../CafeInfo/CafeInfo";
 import VoteOptions from "../VoteOptions/VoteOptions";
 import VoteStats from "../VoteStats/VoteStats";
+import Notification from "../Notification/Notification";
 import type { Votes, VoteType } from "../../types/votes";
 
 const App = () => {
@@ -49,7 +49,7 @@ const App = () => {
           positiveRate={positiveRate}
         />
       ) : (
-        <p className={notifCss.message}>No feedback yet</p>
+        <Notification />
       )}
     </div>
   );
